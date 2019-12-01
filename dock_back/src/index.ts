@@ -6,6 +6,7 @@ const app = express();
 app.use((req: express.Request, res: express.Response, next:express.NextFunction) => {
     // only one hostname or every
     res.header('Access-Control-Allow-Origin', 'http://localhost:4000'); // you can not use last / in cors in Access-Control-Allow-Origin, like this - http://localhost:4000/, acceptable only this - http://localhost:4000 (without last slash)
+    res.header('Access-Control-Allow-Methods', '*');
     res.header('Access-Control-Allow-Headers', '*');
     next();
 }, bodyParser.json());
