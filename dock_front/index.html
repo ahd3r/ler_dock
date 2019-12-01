@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="url" placeholder="url">
+    <button>send req</button>
+    <script>
+        document.querySelector('button').addEventListener('click', async ()=>{
+            try {
+                const resp = await fetch(document.querySelector('.url').value, {
+                    method: 'POST', 
+                    headers: {'Content-Type': 'application/json;charset=utf-8'}, 
+                    body: JSON.stringify({be: 'my'})
+                });
+                console.log(await resp.json());
+            } catch (e) {
+                throw new Error(e);
+            }
+        });
+    </script>
+</body>
+</html>

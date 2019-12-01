@@ -1,0 +1,11 @@
+{
+  "name": "some_front",
+  "version": "1.0.0",
+  "description": "Front",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ander",
+  "license": "ISC"
+}
